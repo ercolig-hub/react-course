@@ -1,0 +1,74 @@
+{
+    "query": {
+        "bool": {
+            "adjust_pure_negative": true,
+            "boost": 1.0,
+            "filter": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must": [
+                            {
+                                "match": {
+                                    "ATTRIBUTES.METADATA.DOCTYPE.exact": {
+                                        "auto_generate_synonyms_phrase_query": true,
+                                        "boost": 1.0,
+                                        "fuzzy_transpositions": true,
+                                        "lenient": false,
+                                        "max_expansions": 50,
+                                        "operator": "OR",
+                                        "prefix_length": 0,
+                                        "query": "Report",
+                                        "zero_terms_query": "NONE"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "must": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "minimum_should_match": "1",
+                        "should": [
+                            {
+                                "match": {
+                                    "OBJECTINFO.NAME": {
+                                        "auto_generate_synonyms_phrase_query": true,
+                                        "boost": 1.0,
+                                        "fuzzy_transpositions": true,
+                                        "lenient": false,
+                                        "max_expansions": 50,
+                                        "operator": "AND",
+                                        "prefix_length": 0,
+                                        "query": "issuer",
+                                        "zero_terms_query": "ALL"
+                                    }
+                                }
+                            },
+                            {
+                                "match": {
+                                    "OBJECTINFO.NAME": {
+                                        "auto_generate_synonyms_phrase_query": true,
+                                        "boost": 1.0,
+                                        "fuzzy_transpositions": true,
+                                        "lenient": false,
+                                        "max_expansions": 50,
+                                        "operator": "AND",
+                                        "prefix_length": 0,
+                                        "query": "in-depth",
+                                        "zero_terms_query": "ALL"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

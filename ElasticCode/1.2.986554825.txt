@@ -1,0 +1,145 @@
+{
+    "query": {
+        "bool": {
+            "adjust_pure_negative": true,
+            "boost": 1.0,
+            "filter": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must": [
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "must_not": [
+                                        {
+                                            "match": {
+                                                "ATTRIBUTES.METADATA.REPORT.MARKEDASDELETED": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "true",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "nested": {
+                                    "boost": 1.0,
+                                    "ignore_unmapped": false,
+                                    "path": "ATTRIBUTES.METADATA.PRIMARYTAGS.PRIMARYISSUERS.PRIMARYISSUER",
+                                    "query": {
+                                        "match": {
+                                            "ATTRIBUTES.METADATA.PRIMARYTAGS.PRIMARYISSUERS.PRIMARYISSUER.MOODYSORGID": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "825513876",
+                                                "zero_terms_query": "NONE"
+                                            }
+                                        }
+                                    },
+                                    "score_mode": "avg"
+                                }
+                            },
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "must_not": [
+                                        {
+                                            "match": {
+                                                "ATTRIBUTES.METADATA.REPORT.MARKEDASDELETED": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "true",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "must": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "constant_score": {
+                                    "boost": 0.0,
+                                    "filter": {
+                                        "match": {
+                                            "SYSATTRIBUTES.PROPS.DOCTYPE": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "report",
+                                                "zero_terms_query": "ALL"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "constant_score": {
+                                    "boost": 0.0,
+                                    "filter": {
+                                        "match": {
+                                            "SYSATTRIBUTES.PROPS.DOCTYPE": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "report",
+                                                "zero_terms_query": "ALL"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

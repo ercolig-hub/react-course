@@ -1,0 +1,162 @@
+{
+    "query": {
+        "bool": {
+            "adjust_pure_negative": true,
+            "boost": 1.0,
+            "filter": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must": [
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "must_not": [
+                                        {
+                                            "match": {
+                                                "ATTRIBUTES.METADATA.REPORT.MARKEDASDELETED": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "true",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "must_not": [
+                                        {
+                                            "match": {
+                                                "ATTRIBUTES.METADATA.REPORT.MARKEDASDELETED": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "true",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "must": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "constant_score": {
+                                    "boost": 0.0,
+                                    "filter": {
+                                        "match": {
+                                            "SYSATTRIBUTES.PROPS.DOCTYPE": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "report",
+                                                "zero_terms_query": "ALL"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "constant_score": {
+                        "boost": 0.0,
+                        "filter": {
+                            "match": {
+                                "ATTRIBUTES.METADATA.REPORT.WORKINGTITLE": {
+                                    "auto_generate_synonyms_phrase_query": true,
+                                    "boost": 1.0,
+                                    "fuzzy_transpositions": true,
+                                    "lenient": false,
+                                    "max_expansions": 50,
+                                    "operator": "AND",
+                                    "prefix_length": 0,
+                                    "query": "2018-MP",
+                                    "zero_terms_query": "ALL"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "constant_score": {
+                        "boost": 0.0,
+                        "filter": {
+                            "match": {
+                                "ATTRIBUTES.METADATA.REPORT.MDCDOCTYPE": {
+                                    "auto_generate_synonyms_phrase_query": true,
+                                    "boost": 1.0,
+                                    "fuzzy_transpositions": true,
+                                    "lenient": false,
+                                    "max_expansions": 50,
+                                    "operator": "AND",
+                                    "prefix_length": 0,
+                                    "query": "Credit Opinion",
+                                    "zero_terms_query": "ALL"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "constant_score": {
+                                    "boost": 0.0,
+                                    "filter": {
+                                        "match": {
+                                            "SYSATTRIBUTES.PROPS.DOCTYPE": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "report",
+                                                "zero_terms_query": "ALL"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

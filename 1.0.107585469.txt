@@ -1,0 +1,241 @@
+{
+    "query": {
+        "bool": {
+            "adjust_pure_negative": true,
+            "boost": 1.0,
+            "must": [
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Use",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "SPV",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Swap",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Guarantors",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Cure",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Trigger",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Breaches",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "can",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Credit",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Negative",
+                        "type": "best_fields"
+                    }
+                },
+                {
+                    "query_string": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "default_operator": "and",
+                        "enable_position_increments": true,
+                        "escape": false,
+                        "fields": [
+                            "CONTENT.*^1.0"
+                        ],
+                        "fuzziness": "AUTO",
+                        "fuzzy_max_expansions": 50,
+                        "fuzzy_prefix_length": 0,
+                        "fuzzy_transpositions": true,
+                        "lenient": true,
+                        "max_determinized_states": 10000,
+                        "phrase_slop": 0,
+                        "query": "Noteholders",
+                        "type": "best_fields"
+                    }
+                }
+            ]
+        }
+    }
+}

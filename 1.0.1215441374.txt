@@ -1,0 +1,22 @@
+{
+    "query": {
+        "constant_score": {
+            "boost": 0.0,
+            "filter": {
+                "match": {
+                    "ATTRIBUTES.METADATA.REPORT.WORKINGTITLE": {
+                        "auto_generate_synonyms_phrase_query": true,
+                        "boost": 1.0,
+                        "fuzzy_transpositions": true,
+                        "lenient": false,
+                        "max_expansions": 50,
+                        "operator": "AND",
+                        "prefix_length": 0,
+                        "query": "RMBS",
+                        "zero_terms_query": "ALL"
+                    }
+                }
+            }
+        }
+    }
+}

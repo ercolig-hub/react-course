@@ -1,0 +1,515 @@
+{
+    "query": {
+        "bool": {
+            "adjust_pure_negative": true,
+            "boost": 1.0,
+            "filter": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must": [
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "minimum_should_match": "1",
+                                    "should": [
+                                        {
+                                            "match": {
+                                                "OBJECTINFO.CREATOR": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "levysam",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "match": {
+                                                "OBJECTINFO.OWNER": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "levysam",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "bool": {
+                                                "adjust_pure_negative": true,
+                                                "boost": 1.0,
+                                                "filter": [
+                                                    {
+                                                        "constant_score": {
+                                                            "boost": 0.0,
+                                                            "filter": {
+                                                                "match": {
+                                                                    "OBJECTINFO.COLLABORATORS": {
+                                                                        "auto_generate_synonyms_phrase_query": true,
+                                                                        "boost": 1.0,
+                                                                        "fuzzy_transpositions": true,
+                                                                        "lenient": false,
+                                                                        "max_expansions": 50,
+                                                                        "operator": "AND",
+                                                                        "prefix_length": 0,
+                                                                        "query": "levysam",
+                                                                        "zero_terms_query": "ALL"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "must_not": [
+                                        {
+                                            "match": {
+                                                "ATTRIBUTES.METADATA.REPORT.MARKEDASDELETED": {
+                                                    "auto_generate_synonyms_phrase_query": true,
+                                                    "boost": 1.0,
+                                                    "fuzzy_transpositions": true,
+                                                    "lenient": false,
+                                                    "max_expansions": 50,
+                                                    "operator": "AND",
+                                                    "prefix_length": 0,
+                                                    "query": "true",
+                                                    "zero_terms_query": "NONE"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "must": [
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "bool": {
+                                    "adjust_pure_negative": true,
+                                    "boost": 1.0,
+                                    "minimum_should_match": "1",
+                                    "should": [
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "EOM.Null",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "L0/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "L0/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "FastTrack/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "FastTrack/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "L2-L4/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "L2-L4/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_PFG/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_PFG/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_SFG/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_SFG/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_Fundamental/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "CO_Fundamental/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "Methodology/PostedOnMDC",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "Methodology/PostedOnMDCHold",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "constant_score": {
+                                                "boost": 0.0,
+                                                "filter": {
+                                                    "match": {
+                                                        "OBJECTINFO.STATUS": {
+                                                            "auto_generate_synonyms_phrase_query": true,
+                                                            "boost": 1.0,
+                                                            "fuzzy_transpositions": true,
+                                                            "lenient": false,
+                                                            "max_expansions": 50,
+                                                            "operator": "AND",
+                                                            "prefix_length": 0,
+                                                            "query": "Internal_Only/Complete",
+                                                            "zero_terms_query": "ALL"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "bool": {
+                        "adjust_pure_negative": true,
+                        "boost": 1.0,
+                        "must_not": [
+                            {
+                                "constant_score": {
+                                    "boost": 0.0,
+                                    "filter": {
+                                        "match": {
+                                            "SYSATTRIBUTES.PROPS.DOCTYPE": {
+                                                "auto_generate_synonyms_phrase_query": true,
+                                                "boost": 1.0,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "max_expansions": 50,
+                                                "operator": "AND",
+                                                "prefix_length": 0,
+                                                "query": "report",
+                                                "zero_terms_query": "ALL"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "constant_score": {
+                        "boost": 0.0,
+                        "filter": {
+                            "match": {
+                                "ATTRIBUTES.METADATA.DOCTYPE": {
+                                    "auto_generate_synonyms_phrase_query": true,
+                                    "boost": 1.0,
+                                    "fuzzy_transpositions": true,
+                                    "lenient": false,
+                                    "max_expansions": 50,
+                                    "operator": "AND",
+                                    "prefix_length": 0,
+                                    "query": "Report",
+                                    "zero_terms_query": "ALL"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "constant_score": {
+                        "boost": 0.0,
+                        "filter": {
+                            "match": {
+                                "ATTRIBUTES.METADATA.REPORT.PRIMARY": {
+                                    "auto_generate_synonyms_phrase_query": true,
+                                    "boost": 1.0,
+                                    "fuzzy_transpositions": true,
+                                    "lenient": false,
+                                    "max_expansions": 50,
+                                    "operator": "AND",
+                                    "prefix_length": 0,
+                                    "query": "true",
+                                    "zero_terms_query": "ALL"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
